@@ -231,8 +231,8 @@ export function Hero() {
                       return
                     }
 
-                    const recipients =
-                      "syedayaan9376@gmail.com,iamkuldeepraj55@gmail.com,soonlay.tech@gmail.com"
+                    const toRecipient = "soonlay.tech@gmail.com"
+                    const ccRecipients = "syedayaan9376@gmail.com,iamkuldeepraj55@gmail.com"
 
                     const subject = `New Project Inquiry: ${projectTitle.trim()}`
 
@@ -256,7 +256,7 @@ Looking forward to hearing from you soon!
 
 Best regards`
 
-                    const mailtoLink = `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`
+                    const mailtoLink = `mailto:${toRecipient}?cc=${ccRecipients}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`
 
                     window.location.href = mailtoLink
 
