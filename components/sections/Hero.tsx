@@ -100,7 +100,6 @@ export function Hero() {
               size="lg"
               className="group"
               onClick={() => {
-                console.log("Contact Us clicked")
                 setShowContact(true)
                 setMessage(null)
               }}
