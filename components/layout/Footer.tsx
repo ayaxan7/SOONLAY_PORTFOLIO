@@ -21,28 +21,28 @@ export function Footer() {
             </p>
             <div className="flex gap-3 text-secondary">
               <Link
-                href="https://linkedin.com/company/soonlay"
+                href="https://www.linkedin.com/company/soonlaytech"
                 aria-label="Soonlay on LinkedIn"
                 className="hover:text-primary"
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link
+              {/* <Link
                 href="https://github.com/soonlay"
                 aria-label="Soonlay on GitHub"
                 className="hover:text-primary"
               >
                 <Github className="h-5 w-5" />
-              </Link>
+              </Link> */}
               <Link
-                href="https://twitter.com/soonlay"
+                href="https://x.com/SoonlayTech"
                 aria-label="Soonlay on Twitter"
                 className="hover:text-primary"
               >
                 <Twitter className="h-5 w-5" />
               </Link>
               <Link
-                href="https://instagram.com/soonlay"
+                href="https://www.instagram.com/soonlay.tech/"
                 aria-label="Soonlay on Instagram"
                 className="hover:text-primary"
               >
@@ -84,10 +84,10 @@ export function Footer() {
             <h3 className="font-medium text-primary">Contact</h3>
             <div className="flex flex-col gap-2 text-secondary">
               <a
-                href="mailto:hello@soonlay.tech"
+                href="mailto:soonlay.tech@gmail.com"
                 className="hover:text-primary"
               >
-                hello@soonlay.tech
+                soonlay.tech@gmail.com
               </a>
               <span>India · Remote-first</span>
               <span>Working with founders globally</span>
@@ -97,7 +97,6 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col justify-between gap-4 border-t border-border pt-6 text-xs text-muted sm:flex-row">
           <span>© {year} Soonlay. All rights reserved.</span>
-          <span>Built with Next.js · Deployed on Vercel</span>
         </div>
       </div>
     </footer>
