@@ -234,24 +234,31 @@ export function Hero() {
                     const recipients =
                       "syedayaan9376@gmail.com,iamkuldeepraj55@gmail.com,soonlay.tech@gmail.com"
 
-                    const subject = `New project inquiry: ${projectTitle.trim()}`
+                    const subject = `New Project Inquiry: ${projectTitle.trim()}`
 
-                    const bodyLines = [
-                      `Project Title: ${projectTitle.trim()}`,
-                      techStack.trim()
-                        ? `Preferred Tech Stack: ${techStack.trim()}`
-                        : "",
-                      description.trim()
-                        ? `Description:\n${description.trim()}`
-                        : ""
-                    ].filter(Boolean)
+                    // Create a professional email template
+                    const emailBody = `Hello Soonlay Team,
 
-                    const params = new URLSearchParams({
-                      subject,
-                      body: bodyLines.join("\n\n")
-                    })
+I would like to discuss a new project with you. Here are the details:
 
-                    window.location.href = `mailto:${recipients}?${params.toString()}`
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROJECT DETAILS
+
+Title: ${projectTitle.trim()}
+${techStack.trim() ? `\nTech Stack: ${techStack.trim()}` : ''}
+
+${description.trim() ? `Description:\n${description.trim()}` : ''}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Looking forward to hearing from you soon!
+
+Best regards`
+
+                    const mailtoLink = `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`
+
+                    window.location.href = mailtoLink
 
                     setMessage(
                       "Opening your email client..."
