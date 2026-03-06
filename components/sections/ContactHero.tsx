@@ -29,7 +29,6 @@ export function ContactHero() {
     }
 
     const toRecipient = "soonlay.tech@gmail.com"
-    const ccRecipients = "syedayaan9376@gmail.com,iamkuldeepraj55@gmail.com"
 
     const emailSubject = `${subject.trim()}`
 
@@ -55,7 +54,7 @@ Looking forward to your response!
 Best regards,
 ${fullName.trim()}`
 
-    const mailtoLink = `mailto:${toRecipient}?cc=${ccRecipients}&subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
+    const mailtoLink = `mailto:${toRecipient}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
 
     window.location.href = mailtoLink
 
